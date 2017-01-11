@@ -333,3 +333,11 @@ func (f *fakeIPTables) AddReloadFunc(reloadFunc func()) {
 
 func (f *fakeIPTables) Destroy() {
 }
+
+func (f *fakeIPTables) RenameChain(table utiliptables.Table, oldChain, newChain utiliptables.Chain) error {
+	return nil
+}
+
+func (f *fakeIPTables) ListRules(table utiliptables.Table, chain utiliptables.Chain, args ...string) ([]byte, error) {
+	return []byte{}, nil
+}
